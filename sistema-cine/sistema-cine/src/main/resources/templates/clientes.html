@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Clientes</title>
+</head>
+<body>
+<h1>Clientes Registrados</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Tipo ID</th>
+        <th>Identificación</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>Departamento</th>
+        <th>País</th>
+        <th>Puntos</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cliente : ${clientes}">
+        <td th:text="${cliente.idCliente}"></td>
+        <td th:text="${cliente.tipoIdentificacion}"></td>
+        <td th:text="${cliente.identificacion}"></td>
+        <td th:text="${cliente.nombre}"></td>
+        <td th:text="${cliente.apellido}"></td>
+        <td th:text="${cliente.direccion}"></td>
+        <td th:text="${cliente.ciudad}"></td>
+        <td th:text="${cliente.departamento}"></td>
+        <td th:text="${cliente.pais}"></td>
+        <td th:text="${cliente.acumulaPuntos}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
