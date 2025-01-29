@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Peliculas</title>
+</head>
+<body>
+<h1>Peliculas Cartelera</h1>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Genero</th>
+        <th>Duracion</th>
+        <th>Portada</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="pelicula : ${peliculas}">
+        <td th:text="${pelicula.idPelicula}"></td>
+        <td th:text="${pelicula.nombre}"></td>
+        <td th:text="${pelicula.genero}"></td>
+        <td th:text="${pelicula.duracion}"></td>
+        <td>
+            <img th:src="@{/images/portadas/{portada}(portada=${pelicula.portada})}" alt="Portada" width="100" height="150">
+
+        </td>
+    </tr>
+
+</table>
+</body>
+</html>

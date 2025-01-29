@@ -21,7 +21,7 @@ public class Pelicula {
     private int duracion;
 
     @Column(name = "portada")
-    private int portada;
+    private String portada;
 
     public int getIdPelicula() {
         return idPelicula;
@@ -55,11 +55,11 @@ public class Pelicula {
         this.duracion = duracion;
     }
 
-    public int getPortada() {
+    public String getPortada() {
         return portada;
     }
 
-    public void setPortada(int portada) {
+    public void setPortada(String portada) {
         this.portada = portada;
     }
 }
